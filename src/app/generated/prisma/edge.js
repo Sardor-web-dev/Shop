@@ -172,7 +172,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres:Sardor 2010@localhost:5432/shop?schema=public"
+        "value": "postgresql://storedb_owner:npg_9g5DasRkhZIw@ep-rough-bread-a4b98fwy-pooler.us-east-1.aws.neon.tech/storedb?sslmode=require"
       }
     }
   },
