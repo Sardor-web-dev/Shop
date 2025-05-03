@@ -23,6 +23,27 @@ async function main() {
             imageUrl:
               "https://www.myg.in/images/detailed/107/61isPIHrHgL._SL1500_-removebg-preview.png",
           },
+          {
+            name: "Mackbook Pro 16",
+            content: "Флагман от Apple",
+            price: 1399.99,
+            imageUrl:
+              "https://mac-center.com/cdn/shop/files/MacBook_Pro_16-in_Silver_PDP_Image_Position-1__ESES_533x.jpg?v=1700303935",
+          },
+          {
+            name: "Mackbook Air 16",
+            content: "Флагман от Mac",
+            price: 1399.99,
+            imageUrl:
+              "https://yi-files.yellowimages.com/products/1539000/1539036/2478398-cover.jpg",
+          },
+          {
+            name: "Galaxy Tab S9",
+            content: "Флагман от Samsung",
+            price: 1399.99,
+            imageUrl:
+              "https://res-2.cloudinary.com/grover/image/upload/v1690306399/hvrpvrqcq2u7bz6vr5mr.png",
+          },
         ],
       },
     },
