@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import SwitchLang from "@/components/custom/SwithLang";
 import { getServerSession } from "next-auth";
 import SessionProvider from "@/components/custom/SessionProvider";
-import LoginBtns from "@/components/LoginInBtns";
+import LoginBtns from "@/components/custom/LoginInBtns";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
