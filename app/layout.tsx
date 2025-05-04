@@ -4,6 +4,9 @@ import "./globals.css";
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import SwitchLang from "@/components/custom/SwithLang";
+import { getServerSession } from "next-auth";
+import SessionProvider from "@/components/custom/SessionProvider";
+import LoginBtns from "@/components/LoginInBtns";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,15 +29,20 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
+  const session = await getServerSession();
+
   return (
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>
-          <SwitchLang />
-        </header>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <SessionProvider session={session}>
+          <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
+            <SwitchLang />
+            <LoginBtns />
+          </header>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </SessionProvider>
       </body>
     </html>
   );

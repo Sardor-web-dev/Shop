@@ -1,3 +1,4 @@
+import AdminBtns from "@/components/custom/AdminBtns";
 import { getTranslations } from "next-intl/server";
 
 export default async function AdminPage() {
@@ -9,7 +10,7 @@ export default async function AdminPage() {
         <h1>{t("title")}</h1>
         <p>{t("description")}</p>
         <p>{t("addProduct")}</p>
-        <form></form>
+        <AdminBtns />
       </div>
     </>
   );
