@@ -1,6 +1,10 @@
 {
   "HomePage": {
     "title": "Welcome to the Apple official website"
+  },
+  "AdminPage": {
+    "title": "Welcome to the Apple official website",
+    "description": "This is the admin page of the Apple official website.",
+    "addProduct": "Add Product"
   }
-
 }
