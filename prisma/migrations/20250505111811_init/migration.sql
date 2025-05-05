@@ -11,12 +11,13 @@ CREATE TABLE "Admin" (
 -- CreateTable
 CREATE TABLE "Product" (
     "id" SERIAL NOT NULL,
-    "name" TEXT NOT NULL,
-    "content" TEXT,
+    "nameEn" TEXT NOT NULL,
+    "nameRu" TEXT NOT NULL,
+    "contentEn" TEXT NOT NULL,
+    "contentRu" TEXT NOT NULL,
     "price" DOUBLE PRECISION NOT NULL,
-    "imageUrl" TEXT,
-    "authorId" INTEGER NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "imageUrl" TEXT NOT NULL,
+    "adminId" INTEGER NOT NULL,
 
     CONSTRAINT "Product_pkey" PRIMARY KEY ("id")
 );
@@ -25,4 +26,4 @@ CREATE TABLE "Product" (
 CREATE UNIQUE INDEX "Admin_email_key" ON "Admin"("email");
 
 -- AddForeignKey
-ALTER TABLE "Product" ADD CONSTRAINT "Product_authorId_fkey" FOREIGN KEY ("authorId") REFERENCES "Admin"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Product" ADD CONSTRAINT "Product_adminId_fkey" FOREIGN KEY ("adminId") REFERENCES "Admin"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

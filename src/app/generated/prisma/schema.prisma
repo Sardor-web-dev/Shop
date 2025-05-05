@@ -17,12 +17,13 @@ model Admin {
 }
 
 model Product {
-  id        Int      @id @default(autoincrement())
-  name      String
-  content   String?
+  id        Int    @id @default(autoincrement())
+  nameEn    String
+  nameRu    String
+  contentEn String
+  contentRu String
   price     Float
-  imageUrl  String?
-  authorId  Int
-  author    Admin    @relation(fields: [authorId], references: [id])
-  createdAt DateTime @default(now())
+  imageUrl  String
+  adminId   Int
+  admin     Admin  @relation(fields: [adminId], references: [id])
 }

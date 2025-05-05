@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { Button } from "../ui/button";
 
 const SwitchLang = () => {
   const router = useRouter();
@@ -12,18 +13,18 @@ const SwitchLang = () => {
   return (
     <>
       <div className="flex gap-2 ">
-        <button
+        <Button
           className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
           onClick={() => handleChange("ru")}
         >
           ru
-        </button>
-        <button
+        </Button>
+        <Button
           className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
           onClick={() => handleChange("en")}
         >
           en
-        </button>
+        </Button>
       </div>
     </>
   );

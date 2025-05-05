@@ -2096,43 +2096,46 @@ export namespace Prisma {
   export type ProductAvgAggregateOutputType = {
     id: number | null
     price: number | null
-    authorId: number | null
+    adminId: number | null
   }
 
   export type ProductSumAggregateOutputType = {
     id: number | null
     price: number | null
-    authorId: number | null
+    adminId: number | null
   }
 
   export type ProductMinAggregateOutputType = {
     id: number | null
-    name: string | null
-    content: string | null
+    nameEn: string | null
+    nameRu: string | null
+    contentEn: string | null
+    contentRu: string | null
     price: number | null
     imageUrl: string | null
-    authorId: number | null
-    createdAt: Date | null
+    adminId: number | null
   }
 
   export type ProductMaxAggregateOutputType = {
     id: number | null
-    name: string | null
-    content: string | null
+    nameEn: string | null
+    nameRu: string | null
+    contentEn: string | null
+    contentRu: string | null
     price: number | null
     imageUrl: string | null
-    authorId: number | null
-    createdAt: Date | null
+    adminId: number | null
   }
 
   export type ProductCountAggregateOutputType = {
     id: number
-    name: number
-    content: number
+    nameEn: number
+    nameRu: number
+    contentEn: number
+    contentRu: number
     price: number
     imageUrl: number
-    authorId: number
-    createdAt: number
+    adminId: number
     _all: number
   }
 
@@ -2140,43 +2143,46 @@ export namespace Prisma {
   export type ProductAvgAggregateInputType = {
     id?: true
     price?: true
-    authorId?: true
+    adminId?: true
   }
 
   export type ProductSumAggregateInputType = {
     id?: true
     price?: true
-    authorId?: true
+    adminId?: true
   }
 
   export type ProductMinAggregateInputType = {
     id?: true
-    name?: true
-    content?: true
+    nameEn?: true
+    nameRu?: true
+    contentEn?: true
+    contentRu?: true
     price?: true
     imageUrl?: true
-    authorId?: true
-    createdAt?: true
+    adminId?: true
   }
 
   export type ProductMaxAggregateInputType = {
     id?: true
-    name?: true
-    content?: true
+    nameEn?: true
+    nameRu?: true
+    contentEn?: true
+    contentRu?: true
     price?: true
     imageUrl?: true
-    authorId?: true
-    createdAt?: true
+    adminId?: true
   }
 
   export type ProductCountAggregateInputType = {
     id?: true
-    name?: true
-    content?: true
+    nameEn?: true
+    nameRu?: true
+    contentEn?: true
+    contentRu?: true
     price?: true
     imageUrl?: true
-    authorId?: true
-    createdAt?: true
+    adminId?: true
     _all?: true
   }
 
@@ -2268,12 +2274,13 @@ export namespace Prisma {
 
   export type ProductGroupByOutputType = {
     id: number
-    name: string
-    content: string | null
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl: string | null
-    authorId: number
-    createdAt: Date
+    imageUrl: string
+    adminId: number
     _count: ProductCountAggregateOutputType | null
     _avg: ProductAvgAggregateOutputType | null
     _sum: ProductSumAggregateOutputType | null
@@ -2297,71 +2304,76 @@ export namespace Prisma {
 
   export type ProductSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    content?: boolean
+    nameEn?: boolean
+    nameRu?: boolean
+    contentEn?: boolean
+    contentRu?: boolean
     price?: boolean
     imageUrl?: boolean
-    authorId?: boolean
-    createdAt?: boolean
-    author?: boolean | AdminDefaultArgs<ExtArgs>
+    adminId?: boolean
+    admin?: boolean | AdminDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["product"]>
 
   export type ProductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    content?: boolean
+    nameEn?: boolean
+    nameRu?: boolean
+    contentEn?: boolean
+    contentRu?: boolean
     price?: boolean
     imageUrl?: boolean
-    authorId?: boolean
-    createdAt?: boolean
-    author?: boolean | AdminDefaultArgs<ExtArgs>
+    adminId?: boolean
+    admin?: boolean | AdminDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["product"]>
 
   export type ProductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    name?: boolean
-    content?: boolean
+    nameEn?: boolean
+    nameRu?: boolean
+    contentEn?: boolean
+    contentRu?: boolean
     price?: boolean
     imageUrl?: boolean
-    authorId?: boolean
-    createdAt?: boolean
-    author?: boolean | AdminDefaultArgs<ExtArgs>
+    adminId?: boolean
+    admin?: boolean | AdminDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["product"]>
 
   export type ProductSelectScalar = {
     id?: boolean
-    name?: boolean
-    content?: boolean
+    nameEn?: boolean
+    nameRu?: boolean
+    contentEn?: boolean
+    contentRu?: boolean
     price?: boolean
     imageUrl?: boolean
-    authorId?: boolean
-    createdAt?: boolean
+    adminId?: boolean
   }
 
-  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "content" | "price" | "imageUrl" | "authorId" | "createdAt", ExtArgs["result"]["product"]>
+  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nameEn" | "nameRu" | "contentEn" | "contentRu" | "price" | "imageUrl" | "adminId", ExtArgs["result"]["product"]>
   export type ProductInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | AdminDefaultArgs<ExtArgs>
+    admin?: boolean | AdminDefaultArgs<ExtArgs>
   }
   export type ProductIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | AdminDefaultArgs<ExtArgs>
+    admin?: boolean | AdminDefaultArgs<ExtArgs>
   }
   export type ProductIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | AdminDefaultArgs<ExtArgs>
+    admin?: boolean | AdminDefaultArgs<ExtArgs>
   }
 
   export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Product"
     objects: {
-      author: Prisma.$AdminPayload<ExtArgs>
+      admin: Prisma.$AdminPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      name: string
-      content: string | null
+      nameEn: string
+      nameRu: string
+      contentEn: string
+      contentRu: string
       price: number
-      imageUrl: string | null
-      authorId: number
-      createdAt: Date
+      imageUrl: string
+      adminId: number
     }, ExtArgs["result"]["product"]>
     composites: {}
   }
@@ -2756,7 +2768,7 @@ export namespace Prisma {
    */
   export interface Prisma__ProductClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    author<T extends AdminDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AdminDefaultArgs<ExtArgs>>): Prisma__AdminClient<$Result.GetResult<Prisma.$AdminPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    admin<T extends AdminDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AdminDefaultArgs<ExtArgs>>): Prisma__AdminClient<$Result.GetResult<Prisma.$AdminPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2787,12 +2799,13 @@ export namespace Prisma {
    */
   interface ProductFieldRefs {
     readonly id: FieldRef<"Product", 'Int'>
-    readonly name: FieldRef<"Product", 'String'>
-    readonly content: FieldRef<"Product", 'String'>
+    readonly nameEn: FieldRef<"Product", 'String'>
+    readonly nameRu: FieldRef<"Product", 'String'>
+    readonly contentEn: FieldRef<"Product", 'String'>
+    readonly contentRu: FieldRef<"Product", 'String'>
     readonly price: FieldRef<"Product", 'Float'>
     readonly imageUrl: FieldRef<"Product", 'String'>
-    readonly authorId: FieldRef<"Product", 'Int'>
-    readonly createdAt: FieldRef<"Product", 'DateTime'>
+    readonly adminId: FieldRef<"Product", 'Int'>
   }
     
 
@@ -3233,12 +3246,13 @@ export namespace Prisma {
 
   export const ProductScalarFieldEnum: {
     id: 'id',
-    name: 'name',
-    content: 'content',
+    nameEn: 'nameEn',
+    nameRu: 'nameRu',
+    contentEn: 'contentEn',
+    contentRu: 'contentRu',
     price: 'price',
     imageUrl: 'imageUrl',
-    authorId: 'authorId',
-    createdAt: 'createdAt'
+    adminId: 'adminId'
   };
 
   export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeof ProductScalarFieldEnum]
@@ -3258,14 +3272,6 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
-
-
-  export const NullsOrder: {
-    first: 'first',
-    last: 'last'
-  };
-
-  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -3312,20 +3318,6 @@ export namespace Prisma {
    * Reference to a field of type 'Float[]'
    */
   export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
-    
-
-
-  /**
-   * Reference to a field of type 'DateTime'
-   */
-  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
-    
-
-
-  /**
-   * Reference to a field of type 'DateTime[]'
-   */
-  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
     
   /**
    * Deep Input Types
@@ -3389,24 +3381,26 @@ export namespace Prisma {
     OR?: ProductWhereInput[]
     NOT?: ProductWhereInput | ProductWhereInput[]
     id?: IntFilter<"Product"> | number
-    name?: StringFilter<"Product"> | string
-    content?: StringNullableFilter<"Product"> | string | null
+    nameEn?: StringFilter<"Product"> | string
+    nameRu?: StringFilter<"Product"> | string
+    contentEn?: StringFilter<"Product"> | string
+    contentRu?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
-    imageUrl?: StringNullableFilter<"Product"> | string | null
-    authorId?: IntFilter<"Product"> | number
-    createdAt?: DateTimeFilter<"Product"> | Date | string
-    author?: XOR<AdminScalarRelationFilter, AdminWhereInput>
+    imageUrl?: StringFilter<"Product"> | string
+    adminId?: IntFilter<"Product"> | number
+    admin?: XOR<AdminScalarRelationFilter, AdminWhereInput>
   }
 
   export type ProductOrderByWithRelationInput = {
     id?: SortOrder
-    name?: SortOrder
-    content?: SortOrderInput | SortOrder
+    nameEn?: SortOrder
+    nameRu?: SortOrder
+    contentEn?: SortOrder
+    contentRu?: SortOrder
     price?: SortOrder
-    imageUrl?: SortOrderInput | SortOrder
-    authorId?: SortOrder
-    createdAt?: SortOrder
-    author?: AdminOrderByWithRelationInput
+    imageUrl?: SortOrder
+    adminId?: SortOrder
+    admin?: AdminOrderByWithRelationInput
   }
 
   export type ProductWhereUniqueInput = Prisma.AtLeast<{
@@ -3414,23 +3408,25 @@ export namespace Prisma {
     AND?: ProductWhereInput | ProductWhereInput[]
     OR?: ProductWhereInput[]
     NOT?: ProductWhereInput | ProductWhereInput[]
-    name?: StringFilter<"Product"> | string
-    content?: StringNullableFilter<"Product"> | string | null
+    nameEn?: StringFilter<"Product"> | string
+    nameRu?: StringFilter<"Product"> | string
+    contentEn?: StringFilter<"Product"> | string
+    contentRu?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
-    imageUrl?: StringNullableFilter<"Product"> | string | null
-    authorId?: IntFilter<"Product"> | number
-    createdAt?: DateTimeFilter<"Product"> | Date | string
-    author?: XOR<AdminScalarRelationFilter, AdminWhereInput>
+    imageUrl?: StringFilter<"Product"> | string
+    adminId?: IntFilter<"Product"> | number
+    admin?: XOR<AdminScalarRelationFilter, AdminWhereInput>
   }, "id">
 
   export type ProductOrderByWithAggregationInput = {
     id?: SortOrder
-    name?: SortOrder
-    content?: SortOrderInput | SortOrder
+    nameEn?: SortOrder
+    nameRu?: SortOrder
+    contentEn?: SortOrder
+    contentRu?: SortOrder
     price?: SortOrder
-    imageUrl?: SortOrderInput | SortOrder
-    authorId?: SortOrder
-    createdAt?: SortOrder
+    imageUrl?: SortOrder
+    adminId?: SortOrder
     _count?: ProductCountOrderByAggregateInput
     _avg?: ProductAvgOrderByAggregateInput
     _max?: ProductMaxOrderByAggregateInput
@@ -3443,19 +3439,20 @@ export namespace Prisma {
     OR?: ProductScalarWhereWithAggregatesInput[]
     NOT?: ProductScalarWhereWithAggregatesInput | ProductScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Product"> | number
-    name?: StringWithAggregatesFilter<"Product"> | string
-    content?: StringNullableWithAggregatesFilter<"Product"> | string | null
+    nameEn?: StringWithAggregatesFilter<"Product"> | string
+    nameRu?: StringWithAggregatesFilter<"Product"> | string
+    contentEn?: StringWithAggregatesFilter<"Product"> | string
+    contentRu?: StringWithAggregatesFilter<"Product"> | string
     price?: FloatWithAggregatesFilter<"Product"> | number
-    imageUrl?: StringNullableWithAggregatesFilter<"Product"> | string | null
-    authorId?: IntWithAggregatesFilter<"Product"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
+    imageUrl?: StringWithAggregatesFilter<"Product"> | string
+    adminId?: IntWithAggregatesFilter<"Product"> | number
   }
 
   export type AdminCreateInput = {
     email: string
     name: string
     password: string
-    products?: ProductCreateNestedManyWithoutAuthorInput
+    products?: ProductCreateNestedManyWithoutAdminInput
   }
 
   export type AdminUncheckedCreateInput = {
@@ -3463,14 +3460,14 @@ export namespace Prisma {
     email: string
     name: string
     password: string
-    products?: ProductUncheckedCreateNestedManyWithoutAuthorInput
+    products?: ProductUncheckedCreateNestedManyWithoutAdminInput
   }
 
   export type AdminUpdateInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
-    products?: ProductUpdateManyWithoutAuthorNestedInput
+    products?: ProductUpdateManyWithoutAdminNestedInput
   }
 
   export type AdminUncheckedUpdateInput = {
@@ -3478,7 +3475,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
-    products?: ProductUncheckedUpdateManyWithoutAuthorNestedInput
+    products?: ProductUncheckedUpdateManyWithoutAdminNestedInput
   }
 
   export type AdminCreateManyInput = {
@@ -3502,69 +3499,76 @@ export namespace Prisma {
   }
 
   export type ProductCreateInput = {
-    name: string
-    content?: string | null
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl?: string | null
-    createdAt?: Date | string
-    author: AdminCreateNestedOneWithoutProductsInput
+    imageUrl: string
+    admin: AdminCreateNestedOneWithoutProductsInput
   }
 
   export type ProductUncheckedCreateInput = {
     id?: number
-    name: string
-    content?: string | null
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl?: string | null
-    authorId: number
-    createdAt?: Date | string
+    imageUrl: string
+    adminId: number
   }
 
   export type ProductUpdateInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    author?: AdminUpdateOneRequiredWithoutProductsNestedInput
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    admin?: AdminUpdateOneRequiredWithoutProductsNestedInput
   }
 
   export type ProductUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    authorId?: IntFieldUpdateOperationsInput | number
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    adminId?: IntFieldUpdateOperationsInput | number
   }
 
   export type ProductCreateManyInput = {
     id?: number
-    name: string
-    content?: string | null
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl?: string | null
-    authorId: number
-    createdAt?: Date | string
+    imageUrl: string
+    adminId: number
   }
 
   export type ProductUpdateManyMutationInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
   }
 
   export type ProductUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    authorId?: IntFieldUpdateOperationsInput | number
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
+    adminId?: IntFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -3666,21 +3670,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type StringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
-  }
-
   export type FloatFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel>
     in?: number[] | ListFloatFieldRefInput<$PrismaModel>
@@ -3692,85 +3681,54 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type DateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
   export type AdminScalarRelationFilter = {
     is?: AdminWhereInput
     isNot?: AdminWhereInput
   }
 
-  export type SortOrderInput = {
-    sort: SortOrder
-    nulls?: NullsOrder
-  }
-
   export type ProductCountOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    content?: SortOrder
+    nameEn?: SortOrder
+    nameRu?: SortOrder
+    contentEn?: SortOrder
+    contentRu?: SortOrder
     price?: SortOrder
     imageUrl?: SortOrder
-    authorId?: SortOrder
-    createdAt?: SortOrder
+    adminId?: SortOrder
   }
 
   export type ProductAvgOrderByAggregateInput = {
     id?: SortOrder
     price?: SortOrder
-    authorId?: SortOrder
+    adminId?: SortOrder
   }
 
   export type ProductMaxOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    content?: SortOrder
+    nameEn?: SortOrder
+    nameRu?: SortOrder
+    contentEn?: SortOrder
+    contentRu?: SortOrder
     price?: SortOrder
     imageUrl?: SortOrder
-    authorId?: SortOrder
-    createdAt?: SortOrder
+    adminId?: SortOrder
   }
 
   export type ProductMinOrderByAggregateInput = {
     id?: SortOrder
-    name?: SortOrder
-    content?: SortOrder
+    nameEn?: SortOrder
+    nameRu?: SortOrder
+    contentEn?: SortOrder
+    contentRu?: SortOrder
     price?: SortOrder
     imageUrl?: SortOrder
-    authorId?: SortOrder
-    createdAt?: SortOrder
+    adminId?: SortOrder
   }
 
   export type ProductSumOrderByAggregateInput = {
     id?: SortOrder
     price?: SortOrder
-    authorId?: SortOrder
-  }
-
-  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
+    adminId?: SortOrder
   }
 
   export type FloatWithAggregatesFilter<$PrismaModel = never> = {
@@ -3789,31 +3747,17 @@ export namespace Prisma {
     _max?: NestedFloatFilter<$PrismaModel>
   }
 
-  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
-  }
-
-  export type ProductCreateNestedManyWithoutAuthorInput = {
-    create?: XOR<ProductCreateWithoutAuthorInput, ProductUncheckedCreateWithoutAuthorInput> | ProductCreateWithoutAuthorInput[] | ProductUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutAuthorInput | ProductCreateOrConnectWithoutAuthorInput[]
-    createMany?: ProductCreateManyAuthorInputEnvelope
+  export type ProductCreateNestedManyWithoutAdminInput = {
+    create?: XOR<ProductCreateWithoutAdminInput, ProductUncheckedCreateWithoutAdminInput> | ProductCreateWithoutAdminInput[] | ProductUncheckedCreateWithoutAdminInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutAdminInput | ProductCreateOrConnectWithoutAdminInput[]
+    createMany?: ProductCreateManyAdminInputEnvelope
     connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
   }
 
-  export type ProductUncheckedCreateNestedManyWithoutAuthorInput = {
-    create?: XOR<ProductCreateWithoutAuthorInput, ProductUncheckedCreateWithoutAuthorInput> | ProductCreateWithoutAuthorInput[] | ProductUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutAuthorInput | ProductCreateOrConnectWithoutAuthorInput[]
-    createMany?: ProductCreateManyAuthorInputEnvelope
+  export type ProductUncheckedCreateNestedManyWithoutAdminInput = {
+    create?: XOR<ProductCreateWithoutAdminInput, ProductUncheckedCreateWithoutAdminInput> | ProductCreateWithoutAdminInput[] | ProductUncheckedCreateWithoutAdminInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutAdminInput | ProductCreateOrConnectWithoutAdminInput[]
+    createMany?: ProductCreateManyAdminInputEnvelope
     connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
   }
 
@@ -3821,17 +3765,17 @@ export namespace Prisma {
     set?: string
   }
 
-  export type ProductUpdateManyWithoutAuthorNestedInput = {
-    create?: XOR<ProductCreateWithoutAuthorInput, ProductUncheckedCreateWithoutAuthorInput> | ProductCreateWithoutAuthorInput[] | ProductUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutAuthorInput | ProductCreateOrConnectWithoutAuthorInput[]
-    upsert?: ProductUpsertWithWhereUniqueWithoutAuthorInput | ProductUpsertWithWhereUniqueWithoutAuthorInput[]
-    createMany?: ProductCreateManyAuthorInputEnvelope
+  export type ProductUpdateManyWithoutAdminNestedInput = {
+    create?: XOR<ProductCreateWithoutAdminInput, ProductUncheckedCreateWithoutAdminInput> | ProductCreateWithoutAdminInput[] | ProductUncheckedCreateWithoutAdminInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutAdminInput | ProductCreateOrConnectWithoutAdminInput[]
+    upsert?: ProductUpsertWithWhereUniqueWithoutAdminInput | ProductUpsertWithWhereUniqueWithoutAdminInput[]
+    createMany?: ProductCreateManyAdminInputEnvelope
     set?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
     disconnect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
     delete?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
     connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-    update?: ProductUpdateWithWhereUniqueWithoutAuthorInput | ProductUpdateWithWhereUniqueWithoutAuthorInput[]
-    updateMany?: ProductUpdateManyWithWhereWithoutAuthorInput | ProductUpdateManyWithWhereWithoutAuthorInput[]
+    update?: ProductUpdateWithWhereUniqueWithoutAdminInput | ProductUpdateWithWhereUniqueWithoutAdminInput[]
+    updateMany?: ProductUpdateManyWithWhereWithoutAdminInput | ProductUpdateManyWithWhereWithoutAdminInput[]
     deleteMany?: ProductScalarWhereInput | ProductScalarWhereInput[]
   }
 
@@ -3843,17 +3787,17 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type ProductUncheckedUpdateManyWithoutAuthorNestedInput = {
-    create?: XOR<ProductCreateWithoutAuthorInput, ProductUncheckedCreateWithoutAuthorInput> | ProductCreateWithoutAuthorInput[] | ProductUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: ProductCreateOrConnectWithoutAuthorInput | ProductCreateOrConnectWithoutAuthorInput[]
-    upsert?: ProductUpsertWithWhereUniqueWithoutAuthorInput | ProductUpsertWithWhereUniqueWithoutAuthorInput[]
-    createMany?: ProductCreateManyAuthorInputEnvelope
+  export type ProductUncheckedUpdateManyWithoutAdminNestedInput = {
+    create?: XOR<ProductCreateWithoutAdminInput, ProductUncheckedCreateWithoutAdminInput> | ProductCreateWithoutAdminInput[] | ProductUncheckedCreateWithoutAdminInput[]
+    connectOrCreate?: ProductCreateOrConnectWithoutAdminInput | ProductCreateOrConnectWithoutAdminInput[]
+    upsert?: ProductUpsertWithWhereUniqueWithoutAdminInput | ProductUpsertWithWhereUniqueWithoutAdminInput[]
+    createMany?: ProductCreateManyAdminInputEnvelope
     set?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
     disconnect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
     delete?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
     connect?: ProductWhereUniqueInput | ProductWhereUniqueInput[]
-    update?: ProductUpdateWithWhereUniqueWithoutAuthorInput | ProductUpdateWithWhereUniqueWithoutAuthorInput[]
-    updateMany?: ProductUpdateManyWithWhereWithoutAuthorInput | ProductUpdateManyWithWhereWithoutAuthorInput[]
+    update?: ProductUpdateWithWhereUniqueWithoutAdminInput | ProductUpdateWithWhereUniqueWithoutAdminInput[]
+    updateMany?: ProductUpdateManyWithWhereWithoutAdminInput | ProductUpdateManyWithWhereWithoutAdminInput[]
     deleteMany?: ProductScalarWhereInput | ProductScalarWhereInput[]
   }
 
@@ -3863,20 +3807,12 @@ export namespace Prisma {
     connect?: AdminWhereUniqueInput
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
-  }
-
   export type FloatFieldUpdateOperationsInput = {
     set?: number
     increment?: number
     decrement?: number
     multiply?: number
     divide?: number
-  }
-
-  export type DateTimeFieldUpdateOperationsInput = {
-    set?: Date | string
   }
 
   export type AdminUpdateOneRequiredWithoutProductsNestedInput = {
@@ -3956,59 +3892,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedStringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
-  }
-
-  export type NestedDateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
-  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
-  }
-
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
-  }
-
   export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel>
     in?: number[] | ListFloatFieldRefInput<$PrismaModel>
@@ -4025,61 +3908,49 @@ export namespace Prisma {
     _max?: NestedFloatFilter<$PrismaModel>
   }
 
-  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedDateTimeFilter<$PrismaModel>
-    _max?: NestedDateTimeFilter<$PrismaModel>
-  }
-
-  export type ProductCreateWithoutAuthorInput = {
-    name: string
-    content?: string | null
+  export type ProductCreateWithoutAdminInput = {
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl?: string | null
-    createdAt?: Date | string
+    imageUrl: string
   }
 
-  export type ProductUncheckedCreateWithoutAuthorInput = {
+  export type ProductUncheckedCreateWithoutAdminInput = {
     id?: number
-    name: string
-    content?: string | null
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl?: string | null
-    createdAt?: Date | string
+    imageUrl: string
   }
 
-  export type ProductCreateOrConnectWithoutAuthorInput = {
+  export type ProductCreateOrConnectWithoutAdminInput = {
     where: ProductWhereUniqueInput
-    create: XOR<ProductCreateWithoutAuthorInput, ProductUncheckedCreateWithoutAuthorInput>
+    create: XOR<ProductCreateWithoutAdminInput, ProductUncheckedCreateWithoutAdminInput>
   }
 
-  export type ProductCreateManyAuthorInputEnvelope = {
-    data: ProductCreateManyAuthorInput | ProductCreateManyAuthorInput[]
+  export type ProductCreateManyAdminInputEnvelope = {
+    data: ProductCreateManyAdminInput | ProductCreateManyAdminInput[]
     skipDuplicates?: boolean
   }
 
-  export type ProductUpsertWithWhereUniqueWithoutAuthorInput = {
+  export type ProductUpsertWithWhereUniqueWithoutAdminInput = {
     where: ProductWhereUniqueInput
-    update: XOR<ProductUpdateWithoutAuthorInput, ProductUncheckedUpdateWithoutAuthorInput>
-    create: XOR<ProductCreateWithoutAuthorInput, ProductUncheckedCreateWithoutAuthorInput>
+    update: XOR<ProductUpdateWithoutAdminInput, ProductUncheckedUpdateWithoutAdminInput>
+    create: XOR<ProductCreateWithoutAdminInput, ProductUncheckedCreateWithoutAdminInput>
   }
 
-  export type ProductUpdateWithWhereUniqueWithoutAuthorInput = {
+  export type ProductUpdateWithWhereUniqueWithoutAdminInput = {
     where: ProductWhereUniqueInput
-    data: XOR<ProductUpdateWithoutAuthorInput, ProductUncheckedUpdateWithoutAuthorInput>
+    data: XOR<ProductUpdateWithoutAdminInput, ProductUncheckedUpdateWithoutAdminInput>
   }
 
-  export type ProductUpdateManyWithWhereWithoutAuthorInput = {
+  export type ProductUpdateManyWithWhereWithoutAdminInput = {
     where: ProductScalarWhereInput
-    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyWithoutAuthorInput>
+    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyWithoutAdminInput>
   }
 
   export type ProductScalarWhereInput = {
@@ -4087,12 +3958,13 @@ export namespace Prisma {
     OR?: ProductScalarWhereInput[]
     NOT?: ProductScalarWhereInput | ProductScalarWhereInput[]
     id?: IntFilter<"Product"> | number
-    name?: StringFilter<"Product"> | string
-    content?: StringNullableFilter<"Product"> | string | null
+    nameEn?: StringFilter<"Product"> | string
+    nameRu?: StringFilter<"Product"> | string
+    contentEn?: StringFilter<"Product"> | string
+    contentRu?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
-    imageUrl?: StringNullableFilter<"Product"> | string | null
-    authorId?: IntFilter<"Product"> | number
-    createdAt?: DateTimeFilter<"Product"> | Date | string
+    imageUrl?: StringFilter<"Product"> | string
+    adminId?: IntFilter<"Product"> | number
   }
 
   export type AdminCreateWithoutProductsInput = {
@@ -4137,39 +4009,43 @@ export namespace Prisma {
     password?: StringFieldUpdateOperationsInput | string
   }
 
-  export type ProductCreateManyAuthorInput = {
+  export type ProductCreateManyAdminInput = {
     id?: number
-    name: string
-    content?: string | null
+    nameEn: string
+    nameRu: string
+    contentEn: string
+    contentRu: string
     price: number
-    imageUrl?: string | null
-    createdAt?: Date | string
+    imageUrl: string
   }
 
-  export type ProductUpdateWithoutAuthorInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+  export type ProductUpdateWithoutAdminInput = {
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
   }
 
-  export type ProductUncheckedUpdateWithoutAuthorInput = {
+  export type ProductUncheckedUpdateWithoutAdminInput = {
     id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
   }
 
-  export type ProductUncheckedUpdateManyWithoutAuthorInput = {
+  export type ProductUncheckedUpdateManyWithoutAdminInput = {
     id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
+    nameEn?: StringFieldUpdateOperationsInput | string
+    nameRu?: StringFieldUpdateOperationsInput | string
+    contentEn?: StringFieldUpdateOperationsInput | string
+    contentRu?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    imageUrl?: StringFieldUpdateOperationsInput | string
   }
 
 
