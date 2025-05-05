@@ -1,6 +1,10 @@
 {
   "HomePage": {
-    "title": "Welcome to the Apple official website"
+    "title": "Welcome to the Apple official website",
+    "btn1": "Sign In",
+    "btn2": "Sign Out",
+    "btn3": "Go to Admin",
+    "btn4": "Go to Home"
   },
   "AdminPage": {
     "title": "Welcome to the Apple official website",

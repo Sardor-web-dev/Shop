@@ -2,10 +2,12 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
 
 const LoginBtns = () => {
   const router = useRouter();
   const session = useSession();
+  const t = useTranslations("HomePage");
   // Fix the bug with btns
   return (
     <>
@@ -16,13 +18,13 @@ const LoginBtns = () => {
               onClick={() => signOut()}
               className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
             >
-              Sign Out
+              {t("btn2")}
             </Button>
             <Button
               onClick={() => router.push("/admin")}
-              className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
+              className="w-30 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
             >
-              Go to Admin
+              {t("btn3")}
             </Button>
           </>
         )}
@@ -31,7 +33,7 @@ const LoginBtns = () => {
             onClick={() => signIn()}
             className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
           >
-            Sign In
+            {t("btn1")}
           </Button>
         )}
       </div>

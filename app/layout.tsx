@@ -37,11 +37,13 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <SessionProvider session={session}>
-          <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
-            <SwitchLang />
-            <LoginBtns />
-          </header>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider locale={locale}>
+            <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
+              <SwitchLang />
+              <LoginBtns />
+            </header>
+            {children}
+          </NextIntlClientProvider>
         </SessionProvider>
       </body>
     </html>
