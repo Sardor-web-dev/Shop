@@ -17,13 +17,13 @@ const SwitchLang = () => {
           className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
           onClick={() => handleChange("ru")}
         >
-          ru
+          RU
         </Button>
         <Button
           className="w-25 h-10 bg-gray-500 p-1 rounded-lg cursor-pointer hover:bg-gray-700 transition-all"
           onClick={() => handleChange("en")}
         >
-          en
+          ENG
         </Button>
       </div>
     </>
