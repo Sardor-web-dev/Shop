@@ -6,9 +6,8 @@ import { useTranslations } from "next-intl";
 
 const LoginBtns = () => {
   const router = useRouter();
-  const session = useSession();
+  const { data: session } = useSession();
   const t = useTranslations("HomePage");
-  // Fix the bug with btns
   return (
     <>
       <div className="flex gap-2">
